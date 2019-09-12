@@ -1,0 +1,20 @@
+keycloak:
+  realm: MyRealm
+  auth-server-url: http://localhost:8080/auth
+  resource: MyApplication
+  public-client: true
+  ssl-required: external
+  token-store: cookie
+
+  securityConstraints:
+    - authRoles: [user]
+      securityCollections:
+        - name: secure stuff
+          patterns: ["/secured"]
+
+logging:
+  level:
+    org.keycloak: TRACE
+
+server:
+  port: 9000

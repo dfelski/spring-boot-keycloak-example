@@ -1,0 +1,23 @@
+version: '3.4'
+
+services:
+
+  app:
+    build: .
+    network_mode: "host"
+
+  keycloak:
+    image: jboss/keycloak
+    network_mode: "host"
+    environment:
+      KEYCLOAK_USER: admin
+      KEYCLOAK_PASSWORD: admin
+    command:
+      - "-b 0.0.0.0"
+      - "-Dkeycloak.import=/tmp/keycloak/realm.json"
+    volumes:
+      - ./keycloak:/tmp/keycloak
+
+
+
+#  docker run -e KEYCLOAK_USER=admin -e KEYCLOAK_PASSWORD=admin -e KEYCLOAK_IMPORT=/tmp/keycloak/realm.json -v $PWD/keycloak:/tmp/keycloak jboss/keycloak
