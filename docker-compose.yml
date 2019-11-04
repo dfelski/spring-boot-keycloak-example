@@ -4,11 +4,13 @@ services:
 
   app:
     build: .
-    network_mode: "host"
+    ports:
+      - 8000:8000
 
-  keycloak:
+  keycloak-dev:
     image: jboss/keycloak
-    network_mode: "host"
+    ports:
+      - 8080:8080
     environment:
       KEYCLOAK_USER: admin
       KEYCLOAK_PASSWORD: admin
@@ -17,7 +19,3 @@ services:
       - "-Dkeycloak.import=/tmp/keycloak/realm.json"
     volumes:
       - ./keycloak:/tmp/keycloak
-
-
-
-#  docker run -e KEYCLOAK_USER=admin -e KEYCLOAK_PASSWORD=admin -e KEYCLOAK_IMPORT=/tmp/keycloak/realm.json -v $PWD/keycloak:/tmp/keycloak jboss/keycloak

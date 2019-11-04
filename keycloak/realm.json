@@ -556,17 +556,17 @@
     {
       "id": "eaea4e38-b2e5-4aa5-83a8-a350d6c3c18d",
       "clientId": "MyApplication",
-      "rootUrl": "http://localhost:9000",
-      "adminUrl": "http://localhost:9000",
+      "rootUrl": "http://localhost:8000",
+      "adminUrl": "http://localhost:8000",
       "surrogateAuthRequired": false,
       "enabled": true,
       "clientAuthenticatorType": "client-secret",
       "secret": "**********",
       "redirectUris": [
-        "http://localhost:9000/*"
+        "http://localhost:8000/*"
       ],
       "webOrigins": [
-        "http://localhost:9000"
+        "http://localhost:8000"
       ],
       "notBefore": 0,
       "bearerOnly": false,

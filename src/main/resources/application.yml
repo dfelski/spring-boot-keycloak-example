@@ -1,6 +1,6 @@
 keycloak:
   realm: MyRealm
-  auth-server-url: http://localhost:8080/auth
+  auth-server-url: http://keycloak-dev:8080/auth
   resource: MyApplication
   public-client: true
   ssl-required: external
@@ -17,4 +17,4 @@ logging:
     org.keycloak: TRACE
 
 server:
-  port: 9000
+  port: 8000
