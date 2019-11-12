@@ -1,16 +1,14 @@
+spring:
+  main:
+    allow-bean-definition-overriding: true
+
 keycloak:
   realm: MyRealm
-  auth-server-url: http://keycloak-dev:8080/auth
+  auth-server-url: http://keycloak-dev:8090/auth
   resource: MyApplication
   public-client: true
   ssl-required: external
   token-store: cookie
-
-  securityConstraints:
-    - authRoles: [user]
-      securityCollections:
-        - name: secure stuff
-          patterns: ["/secured"]
 
 logging:
   level:

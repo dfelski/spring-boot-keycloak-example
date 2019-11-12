@@ -1,10 +1,10 @@
 plugins {
     id 'java'
-    id 'org.springframework.boot' version '2.1.7.RELEASE'
+    id 'org.springframework.boot' version '2.2.0.RELEASE'
 }
 
 ext {
-    keycloakVersion = '7.0.0'
+    keycloakVersion = '7.0.1'
 }
 
 apply plugin: 'io.spring.dependency-management'
@@ -16,7 +16,9 @@ repositories {
 dependencies {
     compile("org.springframework.boot:spring-boot-starter-web")
     compile("org.springframework.boot:spring-boot-starter-thymeleaf")
+    compile("org.springframework.boot:spring-boot-starter-security")
     compile("org.keycloak:keycloak-spring-boot-starter")
+    compile("org.keycloak:keycloak-spring-security-adapter")
 }
 
 dependencyManagement {
