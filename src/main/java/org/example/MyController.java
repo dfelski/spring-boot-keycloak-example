@@ -28,7 +28,6 @@ class MyController {
         KeycloakPrincipal principal=(KeycloakPrincipal) token.getPrincipal();
         KeycloakSecurityContext session = principal.getKeycloakSecurityContext();
         AccessToken accessToken = session.getToken();
-        String a = principal.getName();
 
         LOGGER.info("username: {}", accessToken.getPreferredUsername());
         LOGGER.info("emailId: {}", accessToken.getEmail());

@@ -15,7 +15,6 @@ repositories {
 
 dependencies {
     compile("org.springframework.boot:spring-boot-starter-web")
-    compile("org.springframework.boot:spring-boot-starter-thymeleaf")
     compile("org.springframework.boot:spring-boot-starter-security")
     compile("org.keycloak:keycloak-spring-boot-starter")
     compile("org.keycloak:keycloak-spring-security-adapter")
